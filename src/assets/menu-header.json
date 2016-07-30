@@ -1,0 +1,16 @@
+{
+	"menu":	[
+	{
+		"name": "Crédito",
+		"url": "/credito",
+		"external": false,
+		"auth": "test-1",
+	},
+	{
+		"name": "Menu 2",
+		"url": "/credito",
+		"external": false,
+		"auth": "test-1",
+	}
+	]
+}

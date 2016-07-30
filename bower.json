@@ -1,0 +1,56 @@
+{
+  "name": "directive-formatnumber",
+  "version": "1.3.0-0",
+  "devDependencies": {
+    "angular": "1.3.8",
+    "angular-mocks": "~1.3.8",
+    "bootstrap": "~3.1",
+    "angular-bootstrap": "~0.11.0",
+    "angular-ui-router": "~0.2"
+  },
+  "resolutions": {
+    "angular": "1.3.8"
+  },
+  "authors": [
+    "Efrain Rebolledo"
+  ],
+  "description": "Directiva que permite gestionar la entrada de datos numéricos",
+  "keywords": [
+    "directive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "build.config.js",
+    "package.json",
+    "proxy.js",
+    "Gruntfile.js",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests",
+    "karma",
+    "protractor",
+    "src/index.html",
+    "src/README.me",
+    "src/less",
+    "src/stylus",
+    "src/assets",
+    "src/src/index.html",
+    "src/app/app_config.js",
+    "src/app/app_controller.js",
+    "src/app/app_module.js",
+    "src/app/app_test.js",
+    "src/app/README.md",
+    "src/app/components",
+    "src/app/commons/constants",
+    "src/app/commons/directives/README.md",
+    "src/app/commons/factories",
+    "src/app/commons/filters",
+    "src/app/commons/services",
+    "src/app/commons/templates",
+    "src/app/commons/**/*_test.js",
+    "src/app/commons/README.md"
+  ]
+}

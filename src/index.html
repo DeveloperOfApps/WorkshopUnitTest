@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="WebBancoChile" ng-controller="AppCtrl">
+<head>
+    <title ng-bind="pageTitle"></title>
+
+    <!-- social media tags -->
+	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+
+</head>
+<!--[if IE 9]><body class="ie9"><![endif]-->
+<!--[if !IE9]><!--><body> <!--<![endif]-->
+
+	<header ui-view="header"></header>
+	<aside ui-view="aside"></aside>
+    <div ui-view="main" class="main"></div>
+<!-- 	<footer ui-view="footer"></footer>
+ -->
+
+
+</html>

@@ -1,0 +1,376 @@
+
+@css{
+/*  
+/* Nombre del template a construir
+/* Nombre(s) de quien lo trabajó.
+*/
+}
+@import 'webkit.styl';
+@import 'nib'
+
+
+body
+	margin-bottom 0!important
+
+.bch-plataforma-comecial
+	.oculta-side
+		animacion(0.5s)
+		padding-left 53px
+		
+	.open-side
+		animacion(0.5s)
+		padding-left 235px
+		
+	.menu-top
+		position fixed
+		top 0
+		right 20px
+		width 211px
+		height 50px
+		background  rgba(31, 73, 130, 0.7)
+		padding 10px
+		border-bottom-left-radius 5px
+		border-bottom-right-radius 5px
+		z-index 99
+		.list-untyled
+			text-align center
+			li
+				margin-right 15px
+				&:last-child
+					margin-right 0
+				a
+					font-size 20px
+					.ion-ios-email
+					.ion-android-notifications
+					.ion-android-person
+					.ion-gear-a
+						color #fff
+						&:hover
+							color $info-color
+		
+	.wrapper-plataforma-comercial.oculta-side
+		.sidebar-plataforma
+			width 53px
+			.collapse-side
+				.ion-ios-download-outline
+					margin-right 16px
+					
+			.accordeon-sidebar
+				.accordion-toggle
+					span
+						display none
+						
+			.logout
+				span
+					display none
+					
+			.footer-side
+					display none
+
+	.wrapper-plataforma-comercial.open-side
+		.sidebar-plataforma
+			width 235px
+
+	.wrapper-plataforma-comercial
+		.sidebar-plataforma
+			position fixed
+			left 235px
+			height 100%
+			margin-left -235px
+			overflow-y auto
+			overflow-x hidden
+			background $header-blue
+			animacion(0.5s)
+			
+			.logo-plataforma
+				display block
+				text-align center
+				min-height 61px
+				height auto
+				width 100%
+				background #fff
+				padding-top 10px
+				ul
+					margin-bottom 0
+					text-align left
+					padding 10px 0
+
+					li
+						padding 4px 15px
+			.collapse-side
+				height 40px
+				background $corporative-blue-thin
+				width 100%
+				.ion-ios-download-outline
+					margin-top 5px
+					transform rotate(90deg)
+					color #fff
+					font-size 25px
+					margin-right 10px
+					
+			.accordeon-sidebar
+				.menu-vacio
+					.panel-body
+						display none
+				.panel-group
+					width 236px
+				.panel
+					background none
+				.panel-default
+					border-color $header-blue
+					border-radius 0
+					
+				.panel-heading
+					background $header-blue
+					color $grey-three
+					border-color $header-blue
+					padding 6px 15px
+					h4
+						font-size 12px
+						font-family $bold
+						cursor pointer
+					&:hover
+						color #fff
+				i
+					font-size 20px
+					margin-right 6%
+					display inline-block
+					width 5%
+					vertical-align middle
+				.panel-body
+					background #31589F
+					padding 7px 15px 6px
+					border-top none
+					ul
+						li
+							border-bottom solid 1px $corporative-blue-thin
+							margin-bottom 8px
+					a
+						color #fff
+						&:hover
+							color #72B8FF
+					
+			.logout
+				height 40px
+				background $corporative-blue-thin
+				width 100%
+				margin-top 50px
+				padding-left 10px
+				font-family $bold
+				padding-top 8px
+				padding-left 21px
+				.ion-android-exit
+					color $header-blue
+					font-size 25px
+					margin-right 10px
+					display inline-block
+				span
+					display inline-block
+			.footer-side
+				display block
+				width 219px
+				margin-top 10px
+				ul
+					li
+						color #fff
+						padding 0 15px
+						a
+							color $info-color
+				
+
+
+	.container-home-plataforma
+		position relative
+		animacion(0.5s)
+			
+		.carousel-container
+			position relative
+			width 100%
+			height 404px
+			margin-bottom 20px
+			figure
+				img
+					width 100%
+					height 404px
+					
+			.carousel-control
+				display none
+				
+			article
+				background rgba(255, 255, 255, 0.5)
+				position absolute
+				top 170px
+				left 22%
+				width 494px
+				height 90px
+				text-align center
+				padding-top 7px
+				h2
+				h4
+					color #000
+				hr
+					border-top solid 1px #000
+					margin 0 auto
+					width 90%
+					display block
+			.carousel-indicators
+				bottom 0
+				li
+					margin-right 10px
+					background #fff
+					border solid 1px #fff
+					width 12px
+					height 12px
+				.active
+					background  $corporative-light-blue
+					border solid 1px $corporative-light-blue
+
+		.grid-icon
+			font-size 20px
+			
+		.tabla-tareas-home
+			thead
+				tr
+					td
+						background $corporative-light-blue
+						padding-left 19px
+						color #fff
+						h5
+							margin 0
+			tbody
+				tr
+					td
+						&:first-child
+							padding-left 19px
+						.form-group
+							margin-bottom 0
+						i
+							margin-right 10px
+						.ion-ios-plus-empty
+							font-size 20px
+						.ion-chevron-right
+							font-size 16px
+							
+	.panel-info
+		padding-left 0
+		padding-right 0
+		.img-ejec
+			width 100%
+			height 207px
+		.caja-metas
+			background $grey-three
+			height 195px
+			position relative
+			div[class^="col-"] 
+				padding 0
+			img
+				position absolute
+				top -40%
+				right 31%
+			.col-lg-4
+				margin-top 50px
+				h2
+				h5
+					margin 0
+				
+			hr
+				border-top solid 5px #c7cbd1
+				margin 24px auto 10px
+				width 80%
+	.calendario
+		width 100%
+		border solid 3px #91CAE0
+		position relative
+		min-height 288px
+		.ion-ios-book
+			color #6bb1c9
+			position absolute 
+			top 10px
+			right 40px
+			font-size 30px
+		h1
+			font-size 70px
+			font-family $bold
+			color #333
+			text-decoration underline
+			display block
+			margin 50px 0 0
+			text-align center
+		h2
+			text-align center
+			display block
+			font-family $bold
+			margin -10px 0
+			color #333
+			
+		.mes
+		.dia
+			background #91CAE0
+			padding 15px 10px 0
+			color #fff
+			width 100%
+			margin-top 31px
+			h5
+				display inline-block
+			.ion-chevron-left
+			.ion-chevron-right
+				position absolute
+				left 5%
+			.ion-chevron-right
+				right 5%
+				left inherit
+		.dia
+			background $info-color
+			margin-top 0
+			.badge
+				background #fff
+				color #224D85
+			.list-unstyled 
+				display inline-block
+				margin-bottom 0
+				
+	.center-container
+		padding-left 0
+		padding-right 0
+		
+			
+//resumen credito
+.resumen-busqueda-credito
+	.only-name
+		min-height 163px
+		h5
+			margin-top 50px
+
+
+
+//pre pago
+.btn-recalcular
+	margin-top 20px!important
+	span
+		margin-top 3px
+	.ion-ios-refresh-empty
+		font-size 28px
+		
+	
+.table-prepago
+	.sub-total
+		border-bottom solid 4px #c7cbd1!important
+		tr
+			background $grey-three
+			td
+				color #fff
+	.prepago
+		border none!important
+		tr
+			background $marketing-light-blue
+			td
+				border none!important
+			
+			
+	.total
+		border none!important
+		tr
+			background #6bb1c9
+			td
+				color #fff
+				border none !important

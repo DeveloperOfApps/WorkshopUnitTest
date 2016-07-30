@@ -1,0 +1,57 @@
+<section class="main-content">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<h1 style="margin-top: 20px;">Directiva de control de entrada de datos numéricos para montos</h1>
+				<p>Esta es una directiva de atributo que permite gestionar la entrada de datos numéricos para montos.
+					Se controlará su validez, formato y cantidad de decimales. El número se va ir formateando a medida que se ingrese el valor</p>
+				<p>Se debe vincular el dato de entrada a un elemento del modelo, por tanto es obligatorio el atributo <kbd>ng-model</kbd></p>
+				El input tendrá las siguientes validaciones:
+				<ul>
+					<li>Solo se permite ingresar números positivos</li>
+					<li>En caso de asignar un número de decimal mayor a 0, al ingresar un "." lo reemplazará por una ","</li>
+					<li>Valor mínimo: Opcionalmente se puede agregar un atributo <kbd>format-number-min</kbd> con el valor mínimo permitido.</li>
+					<li>Valor máximo: Opcionalmente se puede agregar un atributo <kbd>format-number-max</kbd> con el valor máximo permitido.</li>
+				</ul>
+
+				<h2>Uso</h2>
+				<p>Para ser utilizada es necesario agregar 2 atributos a los elementos</p>
+				<ul>
+					<li> format-number </li>
+					<li> ng-model </li>
+				</ul>
+
+				<h3>format-number</h3>
+				<p>Llama a la directiva, funciona sobre elementos inputs.</p>
+				<h3>ng-model</h3>
+				<p>Indica la propiedad del modelo que está enlazada con el campo de entrada de datos.</p>
+
+				<h2>Dependencias</h2>
+				<p>Agregar dependencia del módulo <kbd>WebBancoChile.formatNumDirective</kbd>
+
+				<h2>Uso</h2>
+				<p>Como se explica anteriormente esta directiva tiene como objetivo gestionar la entrada de datos numéricos, la forma de utilizarla
+					es agregando atributos a un elemento como se detalla a continuación:</p>
+				<code>&lt;input format-number="&#123;&#123;vm.nroDecimales&#125;&#125;" ng-model="vm.miNumero"
+					format-number-min="{{vm.numeroMin}}"
+					format-number-max="{{vm.numeroMax}}"  &gt;
+				</code>
+				<p>Esto está indicando que el número sea formateado con 3 decimales, con un valor mínimo a 10.000 y un valor mayor a 30.000</p>
+
+				<h2>Ejemplo</h2>
+
+				<form name="miForm" style="margin-bottom: 50px">
+					<input name="miNumero" type="text" class="form-control" ng-model="miNumero"
+						   format-number="{{vm.nroDecimales}}"
+						   format-number-min="{{vm.numeroMin}}"
+						   format-number-max="{{vm.numeroMax}}" >
+				<small style="color:red" ng-message="formatnumbermin" ng-show="miForm.miNumero.$error.formatnumbermin">
+					El número no puede ser menor a {{vm.numeroMin}}
+				</small>
+				<small style="color:red" ng-message="formatnumbermax" ng-show="miForm.miNumero.$error.formatnumbermax">
+					El número no puede ser mayor a {{vm.numeroMax}}</small>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
